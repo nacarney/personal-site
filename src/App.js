@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+// importing Routes as Switch component is outdated, as per YT comment under video
+import { Routes } from "react-router-dom";
+import { Route } from "react-router-dom";
+
+import HomePage from "./pages/Home";
+import BlogPage from "./pages/Blog";
+import PortfolioPage from "./pages/Portfolio";
+
+import Layout from "./components/layout/Layout";
 
 function App() {
+  // domain eg is localhost:3000 or my-page.com
+  // path eg is localhost:3000/products or my-page.com/products
+  // to use nested components (every change of page just adds a new component), format is: 
+  // <Route path = '/'> <AllMeetupsPage /> <Route>
+  // <Route path = '/favorites'> <FavoritesPage /> <Route>
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Layout>
+       <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/new-meetup" element={<BlogPage />} />
+        <Route path="/favorites" element={<PortfolioPage />} />
+      </Routes>
+    </Layout>
   );
 }
 
