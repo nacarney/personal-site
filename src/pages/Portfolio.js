@@ -1,7 +1,7 @@
 function PortfolioPage() {
   return (
     <section>
-      <h1>Home Page</h1>
+      <h1>Portfolio Page</h1>
     </section>
   );
 }

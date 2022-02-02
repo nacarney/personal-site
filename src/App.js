@@ -19,8 +19,8 @@ function App() {
     <Layout>
        <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/new-meetup" element={<BlogPage />} />
-        <Route path="/favorites" element={<PortfolioPage />} />
+        <Route path="/blog" element={<BlogPage />} />
+        <Route path="/portfolio" element={<PortfolioPage />} />
       </Routes>
     </Layout>
   );
