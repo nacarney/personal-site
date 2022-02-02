@@ -9,11 +9,7 @@ function TextBlockItem(props){
           <Card>
             <div className={classes.content}>
               <h3>{props.title}</h3>
-              <address>{props.address}</address>
               <p>{props.description}</p>
-            </div>
-            <div className={classes.actions}>
-              <button onClick={toggleFavoriteStatusHandler}>{itemIsFavorite ? 'Remove from Favorites' : 'To Favorites'}</button>
             </div>
           </Card>
         </li>
